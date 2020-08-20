@@ -1,0 +1,2 @@
+/bin/ar qc libmodule.a  CMakeFiles/module.dir/TaskManager/taskmanger.c.o CMakeFiles/module.dir/SData/sdata.c.o CMakeFiles/module.dir/SocketDao/socketdao.c.o CMakeFiles/module.dir/Log/log.c.o CMakeFiles/module.dir/Pro/api.c.o
+/bin/ranlib libmodule.a

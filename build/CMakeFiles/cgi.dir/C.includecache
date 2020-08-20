@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../src/init/init.h
+stdio.h
+-
+inttypes.h
+-
+stdlib.h
+-
+errno.h
+-
+getopt.h
+-
+
+/home/zxy/learn/CC/CGI/main.c
+init.h
+/home/zxy/learn/CC/CGI/init.h
+

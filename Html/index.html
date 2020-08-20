@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+    <link rel="stylesheet" type="text/css" href="css/color.css">
+    <script>
+        function httpPost(URL) {
+            var temp = document.createElement("form");
+            temp.action = URL;
+            temp.method = "get";
+            temp.style.display = "none";
+            }
+
+    function toMonitorCompanyList(url){
+            httpPost(url);
+            }
+    </script>
+</head>
+<body>
+        <button onclick="toMonitorCompanyList( 'www.baidu.com'  )"> 提交</button>
+</body>
+</html>

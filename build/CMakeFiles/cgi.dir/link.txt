@@ -1,0 +1,1 @@
+/bin/x86_64-linux-gnu-gcc-9 -g  -rdynamic CMakeFiles/cgi.dir/main.c.o  -o cgi  src/module/libmodule.a src/init/libinit.a -lpthread src/module/libmodule.a -lpthread 

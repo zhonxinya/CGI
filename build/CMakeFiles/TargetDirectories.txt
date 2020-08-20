@@ -1,0 +1,9 @@
+/home/zxy/learn/CC/CGI/build/CMakeFiles/rebuild_cache.dir
+/home/zxy/learn/CC/CGI/build/CMakeFiles/edit_cache.dir
+/home/zxy/learn/CC/CGI/build/CMakeFiles/cgi.dir
+/home/zxy/learn/CC/CGI/build/src/init/CMakeFiles/rebuild_cache.dir
+/home/zxy/learn/CC/CGI/build/src/init/CMakeFiles/edit_cache.dir
+/home/zxy/learn/CC/CGI/build/src/init/CMakeFiles/init.dir
+/home/zxy/learn/CC/CGI/build/src/module/CMakeFiles/rebuild_cache.dir
+/home/zxy/learn/CC/CGI/build/src/module/CMakeFiles/edit_cache.dir
+/home/zxy/learn/CC/CGI/build/src/module/CMakeFiles/module.dir
