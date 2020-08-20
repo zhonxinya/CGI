@@ -267,10 +267,11 @@ int setClient(client_info * c_s){
             break;
         }
     }while(cc >=2);
-    if(strstr(c_s->Method,"POST")!=NULL){
+    while( len >0 ){
         memset(buf,'\0',128);
         recv(client,buf,len,MSG_WAITALL);//这里长度改为content-lrngth长度，然后解析
         strcpy(c_s->queryString,buf);
+        if(strlen(buf) == len) len =0;
     }
   //  close(client);
     Log("End of a request\n");
@@ -336,14 +337,16 @@ void path_handler(int client,char* path,char* method,char* qs){
         }
 
     }else if(strstr(method,"POST") != 0){
+        int len=0;
         if(strlen(qs)  > 0){
            printf("直接接收到数据:%s\n",qs);
            memset(qs,'\0',sizeof(qs));
-        }else{
-            recv(client,qs,100,0);
-            printf("再次传输数据:%s\n",qs);
         }
+        //解析函数
         
+
+
+
     }else if(strstr(method,"HEAD") != 0){
         Log("HEAD");
     }else{
