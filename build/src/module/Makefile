@@ -206,6 +206,33 @@ SData/sdata.c.s:
 	cd /home/zxy/learn/CC/CGI/build && $(MAKE) -f src/module/CMakeFiles/module.dir/build.make src/module/CMakeFiles/module.dir/SData/sdata.c.s
 .PHONY : SData/sdata.c.s
 
+SocketDao/html_lib.o: SocketDao/html_lib.c.o
+
+.PHONY : SocketDao/html_lib.o
+
+# target to build an object file
+SocketDao/html_lib.c.o:
+	cd /home/zxy/learn/CC/CGI/build && $(MAKE) -f src/module/CMakeFiles/module.dir/build.make src/module/CMakeFiles/module.dir/SocketDao/html_lib.c.o
+.PHONY : SocketDao/html_lib.c.o
+
+SocketDao/html_lib.i: SocketDao/html_lib.c.i
+
+.PHONY : SocketDao/html_lib.i
+
+# target to preprocess a source file
+SocketDao/html_lib.c.i:
+	cd /home/zxy/learn/CC/CGI/build && $(MAKE) -f src/module/CMakeFiles/module.dir/build.make src/module/CMakeFiles/module.dir/SocketDao/html_lib.c.i
+.PHONY : SocketDao/html_lib.c.i
+
+SocketDao/html_lib.s: SocketDao/html_lib.c.s
+
+.PHONY : SocketDao/html_lib.s
+
+# target to generate assembly for a file
+SocketDao/html_lib.c.s:
+	cd /home/zxy/learn/CC/CGI/build && $(MAKE) -f src/module/CMakeFiles/module.dir/build.make src/module/CMakeFiles/module.dir/SocketDao/html_lib.c.s
+.PHONY : SocketDao/html_lib.c.s
+
 SocketDao/socketdao.o: SocketDao/socketdao.c.o
 
 .PHONY : SocketDao/socketdao.o
@@ -278,6 +305,9 @@ help:
 	@echo "... SData/sdata.o"
 	@echo "... SData/sdata.i"
 	@echo "... SData/sdata.s"
+	@echo "... SocketDao/html_lib.o"
+	@echo "... SocketDao/html_lib.i"
+	@echo "... SocketDao/html_lib.s"
 	@echo "... SocketDao/socketdao.o"
 	@echo "... SocketDao/socketdao.i"
 	@echo "... SocketDao/socketdao.s"

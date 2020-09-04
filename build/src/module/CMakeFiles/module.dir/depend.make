@@ -14,6 +14,9 @@ src/module/CMakeFiles/module.dir/SData/sdata.c.o: ../src/module/SData/list.h
 src/module/CMakeFiles/module.dir/SData/sdata.c.o: ../src/module/SData/sdata.c
 src/module/CMakeFiles/module.dir/SData/sdata.c.o: ../src/module/SData/sdata.h
 
+src/module/CMakeFiles/module.dir/SocketDao/html_lib.c.o: ../src/module/SocketDao/html_lib.c
+src/module/CMakeFiles/module.dir/SocketDao/html_lib.c.o: ../src/module/SocketDao/html_lib.h
+
 src/module/CMakeFiles/module.dir/SocketDao/socketdao.c.o: ../src/module/SData/list.h
 src/module/CMakeFiles/module.dir/SocketDao/socketdao.c.o: ../src/module/SData/sdata.h
 src/module/CMakeFiles/module.dir/SocketDao/socketdao.c.o: ../src/module/Log/log.h

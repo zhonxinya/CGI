@@ -60,15 +60,15 @@ include src/init/CMakeFiles/init.dir/flags.make
 src/init/CMakeFiles/init.dir/init.c.o: src/init/CMakeFiles/init.dir/flags.make
 src/init/CMakeFiles/init.dir/init.c.o: ../src/init/init.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zxy/learn/CC/CGI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/init/CMakeFiles/init.dir/init.c.o"
-	cd /home/zxy/learn/CC/CGI/build/src/init && /bin/x86_64-linux-gnu-gcc-9 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/init.dir/init.c.o   -c /home/zxy/learn/CC/CGI/src/init/init.c
+	cd /home/zxy/learn/CC/CGI/build/src/init && /bin/gcc-9 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/init.dir/init.c.o   -c /home/zxy/learn/CC/CGI/src/init/init.c
 
 src/init/CMakeFiles/init.dir/init.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/init.dir/init.c.i"
-	cd /home/zxy/learn/CC/CGI/build/src/init && /bin/x86_64-linux-gnu-gcc-9 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/zxy/learn/CC/CGI/src/init/init.c > CMakeFiles/init.dir/init.c.i
+	cd /home/zxy/learn/CC/CGI/build/src/init && /bin/gcc-9 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/zxy/learn/CC/CGI/src/init/init.c > CMakeFiles/init.dir/init.c.i
 
 src/init/CMakeFiles/init.dir/init.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/init.dir/init.c.s"
-	cd /home/zxy/learn/CC/CGI/build/src/init && /bin/x86_64-linux-gnu-gcc-9 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/zxy/learn/CC/CGI/src/init/init.c -o CMakeFiles/init.dir/init.c.s
+	cd /home/zxy/learn/CC/CGI/build/src/init && /bin/gcc-9 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/zxy/learn/CC/CGI/src/init/init.c -o CMakeFiles/init.dir/init.c.s
 
 # Object files for target init
 init_OBJECTS = \

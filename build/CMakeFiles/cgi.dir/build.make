@@ -60,15 +60,15 @@ include CMakeFiles/cgi.dir/flags.make
 CMakeFiles/cgi.dir/main.c.o: CMakeFiles/cgi.dir/flags.make
 CMakeFiles/cgi.dir/main.c.o: ../main.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zxy/learn/CC/CGI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/cgi.dir/main.c.o"
-	/bin/x86_64-linux-gnu-gcc-9 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cgi.dir/main.c.o   -c /home/zxy/learn/CC/CGI/main.c
+	/bin/gcc-9 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/cgi.dir/main.c.o   -c /home/zxy/learn/CC/CGI/main.c
 
 CMakeFiles/cgi.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cgi.dir/main.c.i"
-	/bin/x86_64-linux-gnu-gcc-9 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/zxy/learn/CC/CGI/main.c > CMakeFiles/cgi.dir/main.c.i
+	/bin/gcc-9 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/zxy/learn/CC/CGI/main.c > CMakeFiles/cgi.dir/main.c.i
 
 CMakeFiles/cgi.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cgi.dir/main.c.s"
-	/bin/x86_64-linux-gnu-gcc-9 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/zxy/learn/CC/CGI/main.c -o CMakeFiles/cgi.dir/main.c.s
+	/bin/gcc-9 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/zxy/learn/CC/CGI/main.c -o CMakeFiles/cgi.dir/main.c.s
 
 # Object files for target cgi
 cgi_OBJECTS = \

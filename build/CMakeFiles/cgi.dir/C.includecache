@@ -6,19 +6,23 @@
 
 #IncludeRegexTransform: 
 
-../src/init/init.h
+../src/module/SData/list.h
+
+../src/module/SData/sdata.h
+list.h
+../src/module/SData/list.h
+
+../src/module/SocketDao/html_lib.h
 stdio.h
--
-inttypes.h
--
-stdlib.h
--
-errno.h
--
-getopt.h
 -
 
 /home/zxy/learn/CC/CGI/main.c
-init.h
-/home/zxy/learn/CC/CGI/init.h
+html_lib.h
+/home/zxy/learn/CC/CGI/html_lib.h
+stdlib.h
+-
+sdata.h
+/home/zxy/learn/CC/CGI/sdata.h
+string.h
+-
 

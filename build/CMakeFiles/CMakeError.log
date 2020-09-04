@@ -1,0 +1,11 @@
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /bin/x86_64-linux-gnu-g++-9 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+cc1plus: fatal error: CMakeCXXCompilerId.cpp: No such file or directory
+compilation terminated.
+
+

@@ -1,0 +1,171 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "src/module/libmodule.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"src/module/CMakeLists.txt",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 10,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 7,
+				"parent" : 2
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g  "
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"path" : "/home/zxy/learn/CC/CGI/inc"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/home/zxy/learn/CC/CGI/src/module/Error"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/home/zxy/learn/CC/CGI/src/module/FManager"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/home/zxy/learn/CC/CGI/src/module/Handler"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/home/zxy/learn/CC/CGI/src/module/Log"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/home/zxy/learn/CC/CGI/src/module/Pro"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/home/zxy/learn/CC/CGI/src/module/SData"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/home/zxy/learn/CC/CGI/src/module/SocketDao"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/home/zxy/learn/CC/CGI/src/module/TaskManager"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/home/zxy/learn/CC/CGI/src/init"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5
+			]
+		}
+	],
+	"id" : "module::@b00b8e682e30c121b88b",
+	"name" : "module",
+	"nameOnDisk" : "libmodule.a",
+	"paths" : 
+	{
+		"build" : "src/module",
+		"source" : "src/module"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/module/TaskManager/taskmanger.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/module/SData/sdata.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/module/SocketDao/html_lib.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/module/SocketDao/socketdao.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/module/Log/log.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/module/Pro/api.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}
