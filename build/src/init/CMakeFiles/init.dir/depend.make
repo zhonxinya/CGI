@@ -5,6 +5,7 @@ src/init/CMakeFiles/init.dir/init.c.o: ../src/module/Log/log.h
 src/init/CMakeFiles/init.dir/init.c.o: ../src/module/Pro/api.h
 src/init/CMakeFiles/init.dir/init.c.o: ../src/module/SData/list.h
 src/init/CMakeFiles/init.dir/init.c.o: ../src/module/SData/sdata.h
+src/init/CMakeFiles/init.dir/init.c.o: ../src/module/SocketDao/html_lib.h
 src/init/CMakeFiles/init.dir/init.c.o: ../src/module/SocketDao/socketdao.h
 src/init/CMakeFiles/init.dir/init.c.o: ../src/module/TaskManager/taskmanger.h
 src/init/CMakeFiles/init.dir/init.c.o: ../src/init/init.c

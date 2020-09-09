@@ -1,45 +1,34 @@
 #include"html_lib.h"
 #include<string.h>
-void get_code(int code,char*buf){
+void get_code(int code){
     switch(code){
         case 200:
-                strcat(buf,"HTTP/1.1 200 OK");
+                printf("HTTP/1.1 200 OK \r\n");
                 break;
         case 302:
-                strcat(buf,"HTTP/1.1 302 Moved Temporarily");
+                printf("HTTP/1.1 302 Moved Temporarily\r\n");
                 break;
         case 400:
-                strcat(buf,"HTTP/1.1 400 Bad Request");
+                printf("HTTP/1.1 400 Bad Request\r\n");
                 break;
         case 404:
-                strcat(buf,"HTTP/1.1 404 NOT FOUND");
+                printf("HTTP/1.1 404 NOT FOUND\r\n");
                 break;
         case 501:
-                sprintf(buf,"HTTP/1.1  501 Not Implemented");
+                printf("HTTP/1.1  501 Not Implemented\r\n");
                 break;
         default :
-                buf = NULL;
                 break;
     }
 }
 
 
-void my_header(int code,int age,int len){
-    char buf[256];
-    get_code(code,buf);
-    puts(buf);
-    sprintf(buf,"Allow: GET POST HEAD\r\n" );
-    puts(buf);
-    sprintf(buf,"Age: %d\r\n",age );
-    puts(buf);
-    sprintf(buf,"Content-Encoding: gzip\r\n" );
-    puts(buf);
-    sprintf(buf,"Server:nginx/1.6.3\r\n");
-    puts(buf);
-    sprintf(buf, __DATE__ __TIME__ " GMT\r\n");
-    puts(buf);
-    sprintf(buf,"Content-Length: %d\r\n",len);
-    puts(buf);
-    sprintf(buf,"Cache-Control: max-age=3600\r\n");
-    puts(buf);
+void my_header(int code){
+        get_code(code);
+        printf("Allow: GET,POST,HEAD\r\n" );
+        printf("Accept-Encoding: gzip, deflate\r\n");
+     //   printf("Content-Encoding: gzip,deflate\r\n");
+        printf("Server: nginx/1.6.3\r\n");
+        printf("Cache-Control: max-age=3600\r\n");
+      //  printf("Content-Length: %d \r\n\r\n",len);
 }

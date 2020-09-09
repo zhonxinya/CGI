@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+../src/init/init.h
+stdio.h
+-
+inttypes.h
+-
+stdlib.h
+-
+errno.h
+-
+getopt.h
+-
+
 ../src/module/SData/list.h
 
 ../src/module/SData/sdata.h
@@ -25,4 +37,6 @@ sdata.h
 /home/zxy/learn/CC/CGI/sdata.h
 string.h
 -
+init.h
+/home/zxy/learn/CC/CGI/init.h
 

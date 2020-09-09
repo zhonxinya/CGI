@@ -1,9 +1,6 @@
 #include "socketdao.h"
 #include "sdata.h"
 #include "../Log/log.h"
-
-
-
     int server(u_short *port){
         int httpd = 0;
         int on = 1;
@@ -87,7 +84,14 @@ int  file_size(char* path){
     return file_size;
 }
 
-
+void err_msg(int code,char* msg1,char* msg2){
+    printf("HTTP/1.1 200 OK\r\n");
+    printf("Content-Length: 60\r\n\r\n");
+    printf("<html><body>\r\n");
+    printf("<h1>%s</h1><br>\r\n",msg1);
+    printf("<h2><p>    </p>%s</h2><br>\r\n",msg2);
+    printf("</body></html>\r\n\r\n");
+}
 
 
 

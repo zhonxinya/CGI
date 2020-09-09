@@ -22,7 +22,7 @@
 int server(u_short *port);
 void accept_request(void *arg);
 int get_line(int sock, char *buf);
-
+void err_msg(int code,char* msg1,char* msg2);
          
 
 #endif
