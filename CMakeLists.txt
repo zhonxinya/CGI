@@ -23,7 +23,7 @@ add_subdirectory(src/module)
 # 指定生成目标
 add_executable(cgi main.c)
 # 添加链接库
-target_link_libraries(cgi module  init pthread)
+target_link_libraries(cgi module  init pthread sqlite3 ev m )
 
 
 

@@ -1,248 +1,110 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
-<title>BFW6011-BAL</title>
-<meta http-equiv='X-UA-Compatible' content='IE=EmulateIE8'>
-
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<META http-equiv="Pragma" CONTENT="no-cache">
-<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
-<meta HTTP-EQUIV="Expires" CONTENT="Mon, 06 Jan 1990 00:00:01 GMT">
-<meta name="description" content="806GA M 2073">
+<title>Port Trigger</title>
 <link rel="stylesheet" href="/style/normal_ws.css" type="text/css">
-<script language="JavaScript" type="text/javascript" src="../../func.js"></script>
-<script type="text/javascript" src="/lang/b28n.js"></script>
-<script language="javascript" type="text/javascript" src="../../vox/js/validate.js"></script>
-<script language="javascript" type="text/javascript" src="../../linux.js"></script>
-<script language="JavaScript" type="text/javascript" src="../../msg.js"></script>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
 <script type="text/javascript" src="/lang/b28n.js"></script>
 <script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="/js/jquery.blockUI.js"></script>
 <script type="text/javascript" src="/js/utility.js"></script>
 <script type="text/javascript" src="/func.js"></script>
-<script language="javascript" type="text/javascript">
-Butterlate.setTextDomain("wireless");
-var headDesc = "";
-var headMsg = "";
+<script language="JavaScript" type="text/javascript">
+Butterlate.setTextDomain("firewall");
 
-function initTransition()
-{
-    var f = document.forms["main"];
-    e = document.getElementById("2_5_Title");
-    if(f.w_band.value == "2"){
-        e.innerHTML="hello";
-    }else if(f.w_band.value == 5 ){
-        e.innerHTML="25";
+//func
 
-    }
-}
-function init()
-{
-	document.body.style.display="";
-    var wmmenable="0";
-    var apsdenable="0";
-    
-    if(wmmenable == "1" ){
-    	document.main.advanced_wmm_enable.options.selectedIndex = 1;
-    }else if(wmmenable == "0" ){
-    	document.main.advanced_wmm_enable.options.selectedIndex = 0;;
-    }
-    if(apsdenable == "1"){
-    	document.main.advanced_apsd_enable.options.selectedIndex = 1;
-    }else if(apsdenable == "0" ){
-    	document.main.advanced_apsd_enable.options.selectedIndex = 0;
-    }
-    initTransition();
-    dataToVisible(document.main);
+function show_table(count){
+	var str='';
+	str='<tr>'+ 
+			'<td colspan="1"  id="trigger_p1_id_' +count+'">'+ 
+			'<select name="tragger_p1_'  +count+  '">' +
+				'<option select value="1">TCP</option>' +
+				'<option value="2">UDP</option>'	+
+				'<option value="3">TCP/UDP</option>'+
+			'</select>'	+
+			'</td>'+
+			'<td colspan="1"><input   id="trigger_input_t1_'  +count +'"></input></td>'+
+			'<td colspan="1"><input   id="trigger_input_t2_'  +count +'"></input></td>'+	
+			'<td colspan="1" id="trigger_p2_id_' +count+'">'+ 
+				'<select name="tragger_p2_'  +count+  '">' +
+						'<option select value="1">TCP</option>'+
+						'<option value="2">UDP</option>'+
+						'<option value="3">TCP/UDP</option>'+
+				'</select>'+
+			'</td>'+		
+			'<td colspan="1"><input   id="trigger_input_t3_'  +count +'"></input></td>'+
+			'<td colspan="1"><input   id="trigger_input_t4_'  +count +'"></input></td>'+	
+		'</tr>'			;	
+		document.writeln(str);
 }
 
-function adjust_band()
-{
-    var cf = document.forms["main"];
-    cf.h_w_band.value = cf.w_band.value;
-    cf.todo.value = "new_band";
-    dataToHidden(cf);
-    submitForm(cf, '');
+function show_table_all(count){
+	for(i=1;i<=count;i++){
+		show_table(i);
+	}
 }
-
-
-function submitF()
-{
-    var f = document.forms["main"];
-    f.h_w_band.value = f.w_band.value;
-
-    /*if(!isInteger(f.fragthreshold.value, 256, 2346, false))
-    {
-        f.fragthreshold.focus();
-        f.fragthreshold.select();
-        alert(_("wls_msg_40"));
-        return false;
-    }
-
-	if(!isInteger(f.rtsthreshold.value, 1, 2347, false))
-    {
-        f.rtsthreshold.focus();
-        f.rtsthreshold.select();
-        alert(_("wls_msg_41"));
-        return false;
-    }*/
-
-    if(!isInteger(f.beacon.value, 100, 999, false))
-    {
-        f.beacon.focus();
-        f.beacon.select();
-        alert(_("wls_msg_42"));
-        return false;
-    }
-
-    if(!isInteger(f.dtim.value, 1, 255, false))
-    {
-        f.dtim.focus();
-        f.dtim.select();
-        alert(_("wls_msg_43"));
-        return false;
-    }
-    
-    dataToHidden(f);
-    blockui();
-    stdAction(f, 'apply');
-    
-    return true;
-}
-
-function default_setting()
-{
-    var f = document.forms["main"];
-
-    document.main.reg_domain.value = "JP";
-    document.main.fragthreshold.value = "2346";
-	document.main.rtsthreshold.value = "2347";
-	document.main.beacon.value = "100";
-	document.main.dtim.value = "1";
-	document.main.wps_config.selectedIndex = 1;
-
-	dataToHidden(f);
-
-    stdAction(f, 'apply');
-    return true;
-}
-
-
 </script>
 </head>
-<body style="display:none"  marginwidth="0" marginheight="0" topmargin="0" leftmargin="0" onLoad="init();" onResize="if(document.layers) return false;">
-	<noscript>
-        <h4>To view the Web interface of your device, JavaScript must be supported and enabled on your browser! <br><br>Please enable scripting and refresh your browser.</h4>
-    	</noscript>
-<form name="main" method="post" action="/setup.cgi?session_id=d7726d2e30288caa6d5280e2ed27dc2c">
-<table border="0" cellpadding="0" cellspacing="0">
-	<tr><td>
-		<table border="0" cellpadding="2" cellspacing="2" width="100%">
-			<tr class="headrow">
-				<h1 id="advancedTitle" colspan="2" align="left" languageCode="wireless_adv_1">
-				<font color="#0066CC">Advanced Wireless Settings</font>
-				</h1>
-			</tr>	
-		</table>
-	</td></tr>
+<body  onLoad="" onkeypress=""> 
+<table class="body" witdh="480">
+	<form action="/setup.cgi?session_id=@h_session_id#" method=POST name="main">
+	<tr>
+		<td><td id="tragger_title"><h1>firewall > port tragger</h1></td>
+		<p id="tragger_introduction">port tragger setting</p>
+		<hr/>
+		<table border="1" witdh="500" cellpadding="2" cellspacing="1">
+			<tr rowspan="2">
+				<td class="title" style="border-bottom:none;border-right:none" colspan="3">
+					<p>table name</p>
+				</td>
+			</tr>
+			<tr>
+				<td style="border-top:none;border-right:none" class="title" colspan="3">
+					<p>rule  name</p>
+				</td>
+				<td style="border-left:none;border-top:none;" colspan="3"><input type="text" align="left" name="name" size="32" maxlength="16"></input></td>
+			</tr>
+			<tr>
+				<td colspan="1" id="trigger_protocal">protocal</td>
+				<td colspan="1" id="trigger_start_port">start port</td>
+				<td colspan="1" id="trigger_end_port">end port</td>
+				<td colspan="1" id="trigger_open_protocal">open protocal</td>
+				<td colspan="1" id="trigger_open_start_port">open start port</td>
+				<td colspan="1" id="trigger_open_end_port">open end port</td>
+			</tr>
+			<script>
+					show_table_all(7);
+			</script>
+	</tr>
+	</form>	
+	<form  action="/setup.cgi?session_id=@h_session_id#" method=POST name="dele">
+		<tr>
+			<table width="500" border="1" cellpadding="2" cellspacing="1" >
+				<p id="tips_add">
+				        インターネットからWANの特定ポート宛のパケットをLAN側へフォワード（転送）する設定を行います。<br>
+					転送先のLAN側IPアドレス、ポート番号を設定し追加して下さい。
+				</p>
+				<br/>
+				<hr/>
+				<tr>
+					<td class="title" colspan="6" id="forwardCurrentVirtualSrv">Current Port Forwarding in system: </td>
+				</tr>
+				<tr>
+					<td align=center id="forwardCurrentVirtualSrvComment" rowspan="2">协议名</td>
+					<td align=center id="forwardCurrentVirtualSrvProtocol" rowspan="1"> 开放口协议</td>
+					<td align=center id="forwardCurrentVirtualSrvPort_wan" rowspan="1" >内部开始端口</td>		  
+					<td align=center id="forwardCurrentVirtualSrvItemDel" rowspan="2">删除</td>
+				</tr>
+				<tr>
+					<td align=center id="forwardCurrentVirtualSrvProtocol" rowspan="1"> 开放口协议</td>
+					<td align=center id="forwardCurrentVirtualSrvIP" rowspan="2">内部结束端口</td>
+				</tr>
+				<script>
+				</script>
+			</table>
+		</tr>
+	</form>
 </table>
 
-<table border="0" cellpadding="2" cellspacing="2" width="100%">
-	<tr>
-		<td width="660" bgcolor="#ffffff"></td>
-	</tr>
-	<tr>	
-		<td id="advancedIntroduction" colspan="2" class="small" languageCode="wireless_adv_3">Page
-		</td>			
-	</tr>
-	
-
-	
-	<tr><td>
-			<table border="0" cellspacing="1" width="600" cellpadding="2" bordercolor="#9BABBD" >	
-				<tr><td><hr><br></td></tr>
-			</table>
-						
-			<table border="1" cellspacing="1" width="600" cellpadding="2" bordercolor="#9BABBD" >	
-					<tr>
-						<td id="2_5_Title" colspan="2" align="left" bgcolor="black"><font color="#ffffff"></font></td>
-					</tr>	
-					<tr>
-					    <td id="advancedWirelessband" class="head" languageCode="wireless_code_4">Wireless Band: </td>
-					    <td>
-						<select name="w_band" onChange="adjust_band()">
-						    <OPTION value="2">2.4GHz</OPTION>
-						    <OPTION value="5">5GHz</OPTION>
-						</select>
-					    </td>
-					</tr>
-					<tr>
-						<td id="advancedBeacon" class="head" languageCode="wireless_adv_11">Beacon Interval:</td>
-						<td >
-							<input type="text" name="beacon" value="100" size="16" maxlength="4">ms
-							<span id="advancedBeaconSize" class="style2" languageCode="wireless_adv_12">(range 100-999, default 100)</span>
-						</td>
-					</tr>
-					<tr>
-						<td id="advancedDTIM" class="head" languageCode="wireless_adv_13">DTIM Interval:</td>
-						<td >
-							<input type="text" name="dtim" value="1" size="16" maxlength="3">ms 
-							<span id="advancedDTIMSize" class="style2" languageCode="wireless_adv_14">(range 1-255, default 1)</span>
-						</td>
-					</tr>
-				</table>
-	</td></tr>
-	<br></br>
-	
-
-	<tr><td>	
-
-				
-			<table border="0" cellspacing="1" width="600" cellpadding="2" bordercolor="#9BABBD" >	
-				<tr><td><br></td></tr>
-			</table>				
-			<table border="1" cellspacing="1" width="600" cellpadding="2" bordercolor="#9BABBD" >	
-					<tr>
-						<td id="advancedWifiMediaIntroduction" colspan="2" align="left" bgcolor="black"><h4><font color="#ffffff">2G</font></h4></td>
-                    </tr>
-					<tr>
-                        <td id="advancedApsdEnable" class="head" languageCode="wireless_code_4">ASPD:</td>
-                        <td>
-                            <select name="advanced_wmm_enable" onChange="">
-                                <OPTION value=0 id ="adv_wmm_Disable">Disable</OPTION>
-                                <OPTION value=1 id ="adv_wmm_Enable">Enable</OPTION>
-                            </select>
-					    </td>
-					</tr>
-					<tr>
-					    <td id="advancedApsdEnable" class="head" languageCode="wireless_code_4">ASPD: </td>
-					    <td>
-						<select name="advanced_apsd_enable" onChange="">
-							<OPTION value=0 id ="adv_apsd_Disable">Disable</OPTION>
-						    <OPTION value=1 id ="adv_apsd_Enable">Enable</OPTION>
-						</select>
-					    </td>
-					</tr>
-			</table>
-	</td></tr>
-	<tr>
-		<td align="center" bgcolor="#ffffff" colspan="2"><p><br>
-			<input id="advancedApply" type="button" name="itsbutton2" style="{width:160px;}" value="Apply" onClick="return submitF();" 		   	   						class="submitBtn" languageCode="Save">
-			<input id="advancedCancel" type="button" name="itsbutton0" value="Cancel" style="{width:160px;}" class="submitBtn" 			  	  								onClick="window.location.reload()" languageCode="wireless_adv_20">&nbsp;&nbsp;
-			 <!--<input type="button" name="help_lan" value=" Help " onClick="openHelpWin('hh_lan.htm')">-->
-		</td>
-	</tr>	
-</table>
-<input type="hidden" name="h_w_band" value="2">
-<input type="hidden" name="h_reg_domain" value="JP">
-<input type="hidden" name="h_wps_config" value="1">
-<input type="hidden" name="h_fastpath" value="1">
-<input type="hidden" name="h_guest_us_limit" value="1">
-<input type="hidden" name="this_file" value="admin/wireless/wireless_adv.html">
-<input type="hidden" name="next_file" value="admin/wireless/wireless_adv.html">
-<input type="hidden" name="todo" value="apply">
-<input type="hidden" name="message" value="">
-</form>
 </body>
 </html>
-	

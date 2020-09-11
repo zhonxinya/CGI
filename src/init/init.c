@@ -1,14 +1,14 @@
+#include <signal.h>
+#include <poll.h>
+#include <sys/epoll.h>
+#include <sys/time.h>
+#include "html_lib.h"
+#include "taskmanger.h"
 #include "init.h"
 #include "sdata.h"
 #include "socketdao.h"
 #include "log.h"
-#include "taskmanger.h"
-#include <signal.h>
-#include "html_lib.h"
-#include "api.h"
-#include <poll.h>
-#include <sys/epoll.h>
-#include <sys/time.h>
+#include "fmanager.h"
 void AcceptConn(int srvfd);
 void RecvData(int fd);
 char* find_key(char* key,struct list_head* head);
@@ -88,9 +88,7 @@ void init(){
                 }
                 
             }
-        }
-
-            
+        }     
     }
         close(epollfd);
         close(ser);
@@ -141,8 +139,43 @@ int add_msg(Msg* msg,struct list_head* head){
     return 1;
 }
 //读取数据
+void send_file(char* path){
+        FILE *fp;
+        char buf[1000];
+        fp = fopen(path, "r");
+        if (fp == NULL) 
+        {
+           
+        }
+        else 
+        {
+            while (fgets(buf, sizeof(buf), fp) != NULL) 
+            {
+              printf("%s",buf);
+            }
+        }
 
-
+}
+void do_path(char* path,char*qS){
+    int len;
+    if( strcmp(path,"/") == 0  || strcmp(path,"index") == 0){
+        strcpy(path,"src/web/index.html");
+        len=get_file_size_by_stat(path);
+         if(len >0){
+            send_headers( 200, "index", NULL, "text/html", len, -1 );
+            send_file(path);
+         }
+         //send_errors( 200, path,NULL, qS);
+    }else{
+        char p[128];
+        len=get_file_size_by_stat(path);
+        strcpy(p,"src/web");
+        strcat(p,path);
+        send_headers( 200, "index", NULL, "text/javascript", len, -1 );
+        send_file(path);
+    }
+   
+}
 
 void  handle_request(int fd,struct list_head *head){
     int fd1=dup(fd);
@@ -151,16 +184,21 @@ void  handle_request(int fd,struct list_head *head){
     char* method;
     char* path;  
     method=find_key("method",head);
-    path=find_key("path",head);
+    path=find_key("path_row",head);
     if(method == NULL || path == NULL) return ;
     if(strcmp(method,"GET") ==0 ){
         if(path != NULL){
-           int size;
-           char buf[1000];
-           my_header(200);
-           printf("Content-Length: %d\r\n\r\n",(int)sizeof("<script>alert('hello')</script>"));
-           printf("<script>alert('hello')</script>\r\n");
-         //  err_msg(200,"Main","hello");
+            char* tok;
+            char p[128];
+            char qS[128];
+            if((tok=strstr(path,"?")) != NULL){
+                sscanf(path,"%[^?]?%s",p,qS);
+            }else{
+                 sscanf(path,"%s",p);
+                 strcpy(qS,"");
+            }
+            do_path(p,qS);
+
     }
 }
 }
@@ -176,7 +214,7 @@ void RecvData(int fd)
     tmp1=strtok(recvBuf," ");
     add_msg(new_msg("method",tmp1),&head);
     tmp1=strtok(NULL," ");
-    add_msg(new_msg("path",tmp1),&head);
+    add_msg(new_msg("path_row",tmp1),&head);
     memset(recvBuf, 0, 256);
     while(  get_line(fd,recvBuf)  ){
         char*tmp;

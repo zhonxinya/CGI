@@ -1,42 +1,47 @@
 [
 {
   "directory": "/home/zxy/learn/CC/CGI/build",
-  "command": "/bin/gcc-9  -I/home/zxy/learn/CC/CGI/inc -I/home/zxy/learn/CC/CGI/src/module/Error -I/home/zxy/learn/CC/CGI/src/module/FManager -I/home/zxy/learn/CC/CGI/src/module/Handler -I/home/zxy/learn/CC/CGI/src/module/Log -I/home/zxy/learn/CC/CGI/src/module/Pro -I/home/zxy/learn/CC/CGI/src/module/SData -I/home/zxy/learn/CC/CGI/src/module/SocketDao -I/home/zxy/learn/CC/CGI/src/module/TaskManager -I/home/zxy/learn/CC/CGI/src/init  -g   -o CMakeFiles/cgi.dir/main.c.o   -c /home/zxy/learn/CC/CGI/main.c",
+  "command": "/bin/gcc-9  -I/home/zxy/learn/CC/CGI/inc -I/home/zxy/learn/CC/CGI/src/module/Error -I/home/zxy/learn/CC/CGI/src/module/FManager -I/home/zxy/learn/CC/CGI/src/module/Handler -I/home/zxy/learn/CC/CGI/src/module/Log -I/home/zxy/learn/CC/CGI/src/module/Pro -I/home/zxy/learn/CC/CGI/src/module/SData -I/home/zxy/learn/CC/CGI/src/module/SocketDao -I/home/zxy/learn/CC/CGI/src/module/TaskManager -I/home/zxy/learn/CC/CGI/src/init  -Os -DNDEBUG   -o CMakeFiles/cgi.dir/main.c.o   -c /home/zxy/learn/CC/CGI/main.c",
   "file": "/home/zxy/learn/CC/CGI/main.c"
 },
 {
   "directory": "/home/zxy/learn/CC/CGI/build/src/init",
-  "command": "/bin/gcc-9  -I/home/zxy/learn/CC/CGI/inc -I/home/zxy/learn/CC/CGI/src/module/Error -I/home/zxy/learn/CC/CGI/src/module/FManager -I/home/zxy/learn/CC/CGI/src/module/Handler -I/home/zxy/learn/CC/CGI/src/module/Log -I/home/zxy/learn/CC/CGI/src/module/Pro -I/home/zxy/learn/CC/CGI/src/module/SData -I/home/zxy/learn/CC/CGI/src/module/SocketDao -I/home/zxy/learn/CC/CGI/src/module/TaskManager -I/home/zxy/learn/CC/CGI/src/init  -g   -o CMakeFiles/init.dir/init.c.o   -c /home/zxy/learn/CC/CGI/src/init/init.c",
+  "command": "/bin/gcc-9  -I/home/zxy/learn/CC/CGI/inc -I/home/zxy/learn/CC/CGI/src/module/Error -I/home/zxy/learn/CC/CGI/src/module/FManager -I/home/zxy/learn/CC/CGI/src/module/Handler -I/home/zxy/learn/CC/CGI/src/module/Log -I/home/zxy/learn/CC/CGI/src/module/Pro -I/home/zxy/learn/CC/CGI/src/module/SData -I/home/zxy/learn/CC/CGI/src/module/SocketDao -I/home/zxy/learn/CC/CGI/src/module/TaskManager -I/home/zxy/learn/CC/CGI/src/init  -Os -DNDEBUG   -o CMakeFiles/init.dir/init.c.o   -c /home/zxy/learn/CC/CGI/src/init/init.c",
   "file": "/home/zxy/learn/CC/CGI/src/init/init.c"
 },
 {
   "directory": "/home/zxy/learn/CC/CGI/build/src/module",
-  "command": "/bin/gcc-9  -I/home/zxy/learn/CC/CGI/inc -I/home/zxy/learn/CC/CGI/src/module/Error -I/home/zxy/learn/CC/CGI/src/module/FManager -I/home/zxy/learn/CC/CGI/src/module/Handler -I/home/zxy/learn/CC/CGI/src/module/Log -I/home/zxy/learn/CC/CGI/src/module/Pro -I/home/zxy/learn/CC/CGI/src/module/SData -I/home/zxy/learn/CC/CGI/src/module/SocketDao -I/home/zxy/learn/CC/CGI/src/module/TaskManager -I/home/zxy/learn/CC/CGI/src/init  -g   -o CMakeFiles/module.dir/TaskManager/taskmanger.c.o   -c /home/zxy/learn/CC/CGI/src/module/TaskManager/taskmanger.c",
+  "command": "/bin/gcc-9  -I/home/zxy/learn/CC/CGI/inc -I/home/zxy/learn/CC/CGI/src/module/Error -I/home/zxy/learn/CC/CGI/src/module/FManager -I/home/zxy/learn/CC/CGI/src/module/Handler -I/home/zxy/learn/CC/CGI/src/module/Log -I/home/zxy/learn/CC/CGI/src/module/Pro -I/home/zxy/learn/CC/CGI/src/module/SData -I/home/zxy/learn/CC/CGI/src/module/SocketDao -I/home/zxy/learn/CC/CGI/src/module/TaskManager -I/home/zxy/learn/CC/CGI/src/init  -Os -DNDEBUG   -o CMakeFiles/module.dir/TaskManager/taskmanger.c.o   -c /home/zxy/learn/CC/CGI/src/module/TaskManager/taskmanger.c",
   "file": "/home/zxy/learn/CC/CGI/src/module/TaskManager/taskmanger.c"
 },
 {
   "directory": "/home/zxy/learn/CC/CGI/build/src/module",
-  "command": "/bin/gcc-9  -I/home/zxy/learn/CC/CGI/inc -I/home/zxy/learn/CC/CGI/src/module/Error -I/home/zxy/learn/CC/CGI/src/module/FManager -I/home/zxy/learn/CC/CGI/src/module/Handler -I/home/zxy/learn/CC/CGI/src/module/Log -I/home/zxy/learn/CC/CGI/src/module/Pro -I/home/zxy/learn/CC/CGI/src/module/SData -I/home/zxy/learn/CC/CGI/src/module/SocketDao -I/home/zxy/learn/CC/CGI/src/module/TaskManager -I/home/zxy/learn/CC/CGI/src/init  -g   -o CMakeFiles/module.dir/SData/sdata.c.o   -c /home/zxy/learn/CC/CGI/src/module/SData/sdata.c",
-  "file": "/home/zxy/learn/CC/CGI/src/module/SData/sdata.c"
+  "command": "/bin/gcc-9  -I/home/zxy/learn/CC/CGI/inc -I/home/zxy/learn/CC/CGI/src/module/Error -I/home/zxy/learn/CC/CGI/src/module/FManager -I/home/zxy/learn/CC/CGI/src/module/Handler -I/home/zxy/learn/CC/CGI/src/module/Log -I/home/zxy/learn/CC/CGI/src/module/Pro -I/home/zxy/learn/CC/CGI/src/module/SData -I/home/zxy/learn/CC/CGI/src/module/SocketDao -I/home/zxy/learn/CC/CGI/src/module/TaskManager -I/home/zxy/learn/CC/CGI/src/init  -Os -DNDEBUG   -o CMakeFiles/module.dir/SData/cJSON.c.o   -c /home/zxy/learn/CC/CGI/src/module/SData/cJSON.c",
+  "file": "/home/zxy/learn/CC/CGI/src/module/SData/cJSON.c"
 },
 {
   "directory": "/home/zxy/learn/CC/CGI/build/src/module",
-  "command": "/bin/gcc-9  -I/home/zxy/learn/CC/CGI/inc -I/home/zxy/learn/CC/CGI/src/module/Error -I/home/zxy/learn/CC/CGI/src/module/FManager -I/home/zxy/learn/CC/CGI/src/module/Handler -I/home/zxy/learn/CC/CGI/src/module/Log -I/home/zxy/learn/CC/CGI/src/module/Pro -I/home/zxy/learn/CC/CGI/src/module/SData -I/home/zxy/learn/CC/CGI/src/module/SocketDao -I/home/zxy/learn/CC/CGI/src/module/TaskManager -I/home/zxy/learn/CC/CGI/src/init  -g   -o CMakeFiles/module.dir/SocketDao/html_lib.c.o   -c /home/zxy/learn/CC/CGI/src/module/SocketDao/html_lib.c",
+  "command": "/bin/gcc-9  -I/home/zxy/learn/CC/CGI/inc -I/home/zxy/learn/CC/CGI/src/module/Error -I/home/zxy/learn/CC/CGI/src/module/FManager -I/home/zxy/learn/CC/CGI/src/module/Handler -I/home/zxy/learn/CC/CGI/src/module/Log -I/home/zxy/learn/CC/CGI/src/module/Pro -I/home/zxy/learn/CC/CGI/src/module/SData -I/home/zxy/learn/CC/CGI/src/module/SocketDao -I/home/zxy/learn/CC/CGI/src/module/TaskManager -I/home/zxy/learn/CC/CGI/src/init  -Os -DNDEBUG   -o CMakeFiles/module.dir/SocketDao/html_lib.c.o   -c /home/zxy/learn/CC/CGI/src/module/SocketDao/html_lib.c",
   "file": "/home/zxy/learn/CC/CGI/src/module/SocketDao/html_lib.c"
 },
 {
   "directory": "/home/zxy/learn/CC/CGI/build/src/module",
-  "command": "/bin/gcc-9  -I/home/zxy/learn/CC/CGI/inc -I/home/zxy/learn/CC/CGI/src/module/Error -I/home/zxy/learn/CC/CGI/src/module/FManager -I/home/zxy/learn/CC/CGI/src/module/Handler -I/home/zxy/learn/CC/CGI/src/module/Log -I/home/zxy/learn/CC/CGI/src/module/Pro -I/home/zxy/learn/CC/CGI/src/module/SData -I/home/zxy/learn/CC/CGI/src/module/SocketDao -I/home/zxy/learn/CC/CGI/src/module/TaskManager -I/home/zxy/learn/CC/CGI/src/init  -g   -o CMakeFiles/module.dir/SocketDao/socketdao.c.o   -c /home/zxy/learn/CC/CGI/src/module/SocketDao/socketdao.c",
+  "command": "/bin/gcc-9  -I/home/zxy/learn/CC/CGI/inc -I/home/zxy/learn/CC/CGI/src/module/Error -I/home/zxy/learn/CC/CGI/src/module/FManager -I/home/zxy/learn/CC/CGI/src/module/Handler -I/home/zxy/learn/CC/CGI/src/module/Log -I/home/zxy/learn/CC/CGI/src/module/Pro -I/home/zxy/learn/CC/CGI/src/module/SData -I/home/zxy/learn/CC/CGI/src/module/SocketDao -I/home/zxy/learn/CC/CGI/src/module/TaskManager -I/home/zxy/learn/CC/CGI/src/init  -Os -DNDEBUG   -o CMakeFiles/module.dir/SocketDao/socketdao.c.o   -c /home/zxy/learn/CC/CGI/src/module/SocketDao/socketdao.c",
   "file": "/home/zxy/learn/CC/CGI/src/module/SocketDao/socketdao.c"
 },
 {
   "directory": "/home/zxy/learn/CC/CGI/build/src/module",
-  "command": "/bin/gcc-9  -I/home/zxy/learn/CC/CGI/inc -I/home/zxy/learn/CC/CGI/src/module/Error -I/home/zxy/learn/CC/CGI/src/module/FManager -I/home/zxy/learn/CC/CGI/src/module/Handler -I/home/zxy/learn/CC/CGI/src/module/Log -I/home/zxy/learn/CC/CGI/src/module/Pro -I/home/zxy/learn/CC/CGI/src/module/SData -I/home/zxy/learn/CC/CGI/src/module/SocketDao -I/home/zxy/learn/CC/CGI/src/module/TaskManager -I/home/zxy/learn/CC/CGI/src/init  -g   -o CMakeFiles/module.dir/Log/log.c.o   -c /home/zxy/learn/CC/CGI/src/module/Log/log.c",
+  "command": "/bin/gcc-9  -I/home/zxy/learn/CC/CGI/inc -I/home/zxy/learn/CC/CGI/src/module/Error -I/home/zxy/learn/CC/CGI/src/module/FManager -I/home/zxy/learn/CC/CGI/src/module/Handler -I/home/zxy/learn/CC/CGI/src/module/Log -I/home/zxy/learn/CC/CGI/src/module/Pro -I/home/zxy/learn/CC/CGI/src/module/SData -I/home/zxy/learn/CC/CGI/src/module/SocketDao -I/home/zxy/learn/CC/CGI/src/module/TaskManager -I/home/zxy/learn/CC/CGI/src/init  -Os -DNDEBUG   -o CMakeFiles/module.dir/Log/log.c.o   -c /home/zxy/learn/CC/CGI/src/module/Log/log.c",
   "file": "/home/zxy/learn/CC/CGI/src/module/Log/log.c"
 },
 {
   "directory": "/home/zxy/learn/CC/CGI/build/src/module",
-  "command": "/bin/gcc-9  -I/home/zxy/learn/CC/CGI/inc -I/home/zxy/learn/CC/CGI/src/module/Error -I/home/zxy/learn/CC/CGI/src/module/FManager -I/home/zxy/learn/CC/CGI/src/module/Handler -I/home/zxy/learn/CC/CGI/src/module/Log -I/home/zxy/learn/CC/CGI/src/module/Pro -I/home/zxy/learn/CC/CGI/src/module/SData -I/home/zxy/learn/CC/CGI/src/module/SocketDao -I/home/zxy/learn/CC/CGI/src/module/TaskManager -I/home/zxy/learn/CC/CGI/src/init  -g   -o CMakeFiles/module.dir/Pro/api.c.o   -c /home/zxy/learn/CC/CGI/src/module/Pro/api.c",
-  "file": "/home/zxy/learn/CC/CGI/src/module/Pro/api.c"
+  "command": "/bin/gcc-9  -I/home/zxy/learn/CC/CGI/inc -I/home/zxy/learn/CC/CGI/src/module/Error -I/home/zxy/learn/CC/CGI/src/module/FManager -I/home/zxy/learn/CC/CGI/src/module/Handler -I/home/zxy/learn/CC/CGI/src/module/Log -I/home/zxy/learn/CC/CGI/src/module/Pro -I/home/zxy/learn/CC/CGI/src/module/SData -I/home/zxy/learn/CC/CGI/src/module/SocketDao -I/home/zxy/learn/CC/CGI/src/module/TaskManager -I/home/zxy/learn/CC/CGI/src/init  -Os -DNDEBUG   -o CMakeFiles/module.dir/Pro/jsonrpc-c.c.o   -c /home/zxy/learn/CC/CGI/src/module/Pro/jsonrpc-c.c",
+  "file": "/home/zxy/learn/CC/CGI/src/module/Pro/jsonrpc-c.c"
+},
+{
+  "directory": "/home/zxy/learn/CC/CGI/build/src/module",
+  "command": "/bin/gcc-9  -I/home/zxy/learn/CC/CGI/inc -I/home/zxy/learn/CC/CGI/src/module/Error -I/home/zxy/learn/CC/CGI/src/module/FManager -I/home/zxy/learn/CC/CGI/src/module/Handler -I/home/zxy/learn/CC/CGI/src/module/Log -I/home/zxy/learn/CC/CGI/src/module/Pro -I/home/zxy/learn/CC/CGI/src/module/SData -I/home/zxy/learn/CC/CGI/src/module/SocketDao -I/home/zxy/learn/CC/CGI/src/module/TaskManager -I/home/zxy/learn/CC/CGI/src/init  -Os -DNDEBUG   -o CMakeFiles/module.dir/FManager/fmanager.c.o   -c /home/zxy/learn/CC/CGI/src/module/FManager/fmanager.c",
+  "file": "/home/zxy/learn/CC/CGI/src/module/FManager/fmanager.c"
 }
 ]

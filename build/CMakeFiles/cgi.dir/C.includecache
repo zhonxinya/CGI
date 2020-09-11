@@ -23,14 +23,14 @@ getopt.h
 ../src/module/SData/sdata.h
 list.h
 ../src/module/SData/list.h
+stddef.h
+-
 
 ../src/module/SocketDao/html_lib.h
 stdio.h
 -
 
 /home/zxy/learn/CC/CGI/main.c
-html_lib.h
-/home/zxy/learn/CC/CGI/html_lib.h
 stdlib.h
 -
 sdata.h
@@ -39,4 +39,8 @@ string.h
 -
 init.h
 /home/zxy/learn/CC/CGI/init.h
+sqlite3.h
+/home/zxy/learn/CC/CGI/sqlite3.h
+html_lib.h
+/home/zxy/learn/CC/CGI/html_lib.h
 

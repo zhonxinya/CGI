@@ -125,6 +125,33 @@ module/fast:
 	cd /home/zxy/learn/CC/CGI/build && $(MAKE) -f src/module/CMakeFiles/module.dir/build.make src/module/CMakeFiles/module.dir/build
 .PHONY : module/fast
 
+FManager/fmanager.o: FManager/fmanager.c.o
+
+.PHONY : FManager/fmanager.o
+
+# target to build an object file
+FManager/fmanager.c.o:
+	cd /home/zxy/learn/CC/CGI/build && $(MAKE) -f src/module/CMakeFiles/module.dir/build.make src/module/CMakeFiles/module.dir/FManager/fmanager.c.o
+.PHONY : FManager/fmanager.c.o
+
+FManager/fmanager.i: FManager/fmanager.c.i
+
+.PHONY : FManager/fmanager.i
+
+# target to preprocess a source file
+FManager/fmanager.c.i:
+	cd /home/zxy/learn/CC/CGI/build && $(MAKE) -f src/module/CMakeFiles/module.dir/build.make src/module/CMakeFiles/module.dir/FManager/fmanager.c.i
+.PHONY : FManager/fmanager.c.i
+
+FManager/fmanager.s: FManager/fmanager.c.s
+
+.PHONY : FManager/fmanager.s
+
+# target to generate assembly for a file
+FManager/fmanager.c.s:
+	cd /home/zxy/learn/CC/CGI/build && $(MAKE) -f src/module/CMakeFiles/module.dir/build.make src/module/CMakeFiles/module.dir/FManager/fmanager.c.s
+.PHONY : FManager/fmanager.c.s
+
 Log/log.o: Log/log.c.o
 
 .PHONY : Log/log.o
@@ -152,59 +179,59 @@ Log/log.c.s:
 	cd /home/zxy/learn/CC/CGI/build && $(MAKE) -f src/module/CMakeFiles/module.dir/build.make src/module/CMakeFiles/module.dir/Log/log.c.s
 .PHONY : Log/log.c.s
 
-Pro/api.o: Pro/api.c.o
+Pro/jsonrpc-c.o: Pro/jsonrpc-c.c.o
 
-.PHONY : Pro/api.o
-
-# target to build an object file
-Pro/api.c.o:
-	cd /home/zxy/learn/CC/CGI/build && $(MAKE) -f src/module/CMakeFiles/module.dir/build.make src/module/CMakeFiles/module.dir/Pro/api.c.o
-.PHONY : Pro/api.c.o
-
-Pro/api.i: Pro/api.c.i
-
-.PHONY : Pro/api.i
-
-# target to preprocess a source file
-Pro/api.c.i:
-	cd /home/zxy/learn/CC/CGI/build && $(MAKE) -f src/module/CMakeFiles/module.dir/build.make src/module/CMakeFiles/module.dir/Pro/api.c.i
-.PHONY : Pro/api.c.i
-
-Pro/api.s: Pro/api.c.s
-
-.PHONY : Pro/api.s
-
-# target to generate assembly for a file
-Pro/api.c.s:
-	cd /home/zxy/learn/CC/CGI/build && $(MAKE) -f src/module/CMakeFiles/module.dir/build.make src/module/CMakeFiles/module.dir/Pro/api.c.s
-.PHONY : Pro/api.c.s
-
-SData/sdata.o: SData/sdata.c.o
-
-.PHONY : SData/sdata.o
+.PHONY : Pro/jsonrpc-c.o
 
 # target to build an object file
-SData/sdata.c.o:
-	cd /home/zxy/learn/CC/CGI/build && $(MAKE) -f src/module/CMakeFiles/module.dir/build.make src/module/CMakeFiles/module.dir/SData/sdata.c.o
-.PHONY : SData/sdata.c.o
+Pro/jsonrpc-c.c.o:
+	cd /home/zxy/learn/CC/CGI/build && $(MAKE) -f src/module/CMakeFiles/module.dir/build.make src/module/CMakeFiles/module.dir/Pro/jsonrpc-c.c.o
+.PHONY : Pro/jsonrpc-c.c.o
 
-SData/sdata.i: SData/sdata.c.i
+Pro/jsonrpc-c.i: Pro/jsonrpc-c.c.i
 
-.PHONY : SData/sdata.i
+.PHONY : Pro/jsonrpc-c.i
 
 # target to preprocess a source file
-SData/sdata.c.i:
-	cd /home/zxy/learn/CC/CGI/build && $(MAKE) -f src/module/CMakeFiles/module.dir/build.make src/module/CMakeFiles/module.dir/SData/sdata.c.i
-.PHONY : SData/sdata.c.i
+Pro/jsonrpc-c.c.i:
+	cd /home/zxy/learn/CC/CGI/build && $(MAKE) -f src/module/CMakeFiles/module.dir/build.make src/module/CMakeFiles/module.dir/Pro/jsonrpc-c.c.i
+.PHONY : Pro/jsonrpc-c.c.i
 
-SData/sdata.s: SData/sdata.c.s
+Pro/jsonrpc-c.s: Pro/jsonrpc-c.c.s
 
-.PHONY : SData/sdata.s
+.PHONY : Pro/jsonrpc-c.s
 
 # target to generate assembly for a file
-SData/sdata.c.s:
-	cd /home/zxy/learn/CC/CGI/build && $(MAKE) -f src/module/CMakeFiles/module.dir/build.make src/module/CMakeFiles/module.dir/SData/sdata.c.s
-.PHONY : SData/sdata.c.s
+Pro/jsonrpc-c.c.s:
+	cd /home/zxy/learn/CC/CGI/build && $(MAKE) -f src/module/CMakeFiles/module.dir/build.make src/module/CMakeFiles/module.dir/Pro/jsonrpc-c.c.s
+.PHONY : Pro/jsonrpc-c.c.s
+
+SData/cJSON.o: SData/cJSON.c.o
+
+.PHONY : SData/cJSON.o
+
+# target to build an object file
+SData/cJSON.c.o:
+	cd /home/zxy/learn/CC/CGI/build && $(MAKE) -f src/module/CMakeFiles/module.dir/build.make src/module/CMakeFiles/module.dir/SData/cJSON.c.o
+.PHONY : SData/cJSON.c.o
+
+SData/cJSON.i: SData/cJSON.c.i
+
+.PHONY : SData/cJSON.i
+
+# target to preprocess a source file
+SData/cJSON.c.i:
+	cd /home/zxy/learn/CC/CGI/build && $(MAKE) -f src/module/CMakeFiles/module.dir/build.make src/module/CMakeFiles/module.dir/SData/cJSON.c.i
+.PHONY : SData/cJSON.c.i
+
+SData/cJSON.s: SData/cJSON.c.s
+
+.PHONY : SData/cJSON.s
+
+# target to generate assembly for a file
+SData/cJSON.c.s:
+	cd /home/zxy/learn/CC/CGI/build && $(MAKE) -f src/module/CMakeFiles/module.dir/build.make src/module/CMakeFiles/module.dir/SData/cJSON.c.s
+.PHONY : SData/cJSON.c.s
 
 SocketDao/html_lib.o: SocketDao/html_lib.c.o
 
@@ -296,15 +323,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... module"
+	@echo "... FManager/fmanager.o"
+	@echo "... FManager/fmanager.i"
+	@echo "... FManager/fmanager.s"
 	@echo "... Log/log.o"
 	@echo "... Log/log.i"
 	@echo "... Log/log.s"
-	@echo "... Pro/api.o"
-	@echo "... Pro/api.i"
-	@echo "... Pro/api.s"
-	@echo "... SData/sdata.o"
-	@echo "... SData/sdata.i"
-	@echo "... SData/sdata.s"
+	@echo "... Pro/jsonrpc-c.o"
+	@echo "... Pro/jsonrpc-c.i"
+	@echo "... Pro/jsonrpc-c.s"
+	@echo "... SData/cJSON.o"
+	@echo "... SData/cJSON.i"
+	@echo "... SData/cJSON.s"
 	@echo "... SocketDao/html_lib.o"
 	@echo "... SocketDao/html_lib.i"
 	@echo "... SocketDao/html_lib.s"

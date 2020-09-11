@@ -15,8 +15,16 @@ int html_parser(){
 
 
 }
+void handler(int sig){
 
-
+	printf("sig ：%d\n",sig);
+}
+void wait_pid_handle(int sig){
+	pid_t pid;
+	int stat;
+	pid=wait(&stat);
+	return ;
+}
 
 
 
