@@ -13,7 +13,9 @@
 #define PROTOCOL "HTTP/1.1"
 #define RFC1123FMT "%a, %d %b %Y %H:%M:%S GMT"
 
-
+ void send_msg(char* buf,int fd){
+     send( fd, buf, strlen(buf), 0 );  
+}
  void send_errors( int status, char* title, char* extra_header, char* text )
     {
         send_headers( status, title, extra_header, "text/html", -1, -1 );
@@ -32,7 +34,6 @@
          <address><a href=\"%s\">%s</a></address>\r\n\
         </body>\r\n\
         </html>\r\n", SERVER_URL, SERVER_NAME );
-        (void) fflush( stdout );
         exit(1);
  }
 
@@ -56,7 +57,7 @@
                 (void) strftime( timebuf, sizeof(timebuf), RFC1123FMT, gmtime( &mod ) );
                 (void) printf( "Last-Modified: %s\r\n", timebuf );
                 }
-        (void) printf( "Connection: close\r\n" );
+       // (void) printf( "Connection: close\r\n" );
         (void) printf( "\r\n\r\n" );
     }
  void file_details( char* dir, char* name )

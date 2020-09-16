@@ -66,8 +66,27 @@
 #include "html_lib.h"
 int main()
 {
+	 init();
+  // char enable[12]={0};
+  // char des[12]={0};
+  // int proto_in=0;
+  // int proto_tri=0;
+  // char port_s[12]={0};
+  // char port_st[12]={0};
+  // char port_et[12]={0};
+  // char port_e[12]={0};
+  // int wan_id=0;
+  // char  str[128]="1-dd-1-12-13-1-12-13-2-";
+  // sscanf(str,"%[^-]-%[^-]-%d-%[^-]-%[^-]-%d-%[^-]-%[^-]-%d-"
+  //   ,enable,des,&proto_in,
+  //   port_s,port_e,&proto_tri,
+  //   port_st,port_et,&wan_id );
+  //   printf("%s %s %d %s %s %d %s %s %d\n",enable,des,proto_in,port_s,port_e,proto_tri,port_st,port_et,wan_id );
+  
 
-	init();
+
+
+
     //  sqlite3 *db=NULL;
     //  int len;
     //  int i=0;

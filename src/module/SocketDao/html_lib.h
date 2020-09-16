@@ -10,4 +10,5 @@ void get_code(int code);
  void strencode( char* to, size_t tosize, const char* from );
  void send_headers( int status, char* title, char* extra_header, char* mime_type, off_t length, time_t mod );
  void send_errors( int status, char* title, char* extra_header, char* text );
+ void send_msg(char* buf,int fd);
 #endif

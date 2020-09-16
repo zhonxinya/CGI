@@ -80,7 +80,8 @@ void init(){
             {
                 pid_t pid;
                 pid=fork();
-                if(pid == 0){
+                sleep(0.1);
+                if(pid == 0){   
                     RecvData(eventList[i].data.fd);
                 }else if(pid <0){
                     perror("connect pid");
@@ -139,45 +140,56 @@ int add_msg(Msg* msg,struct list_head* head){
     return 1;
 }
 //读取数据
-void send_file(char* path){
+void send_file(char* path,int fd){
         FILE *fp;
         char buf[1000];
         fp = fopen(path, "r");
         if (fp == NULL) 
         {
-           
+           send_errors( 404, path,NULL,"NOT FOUND");
         }
         else 
         {
             while (fgets(buf, sizeof(buf), fp) != NULL) 
             {
-              printf("%s",buf);
+              send( fd, buf, strlen(buf), 0 );  
             }
+            fclose(fp);
         }
 
 }
-void do_path(char* path,char*qS){
+
+void do_path(char* path,char*qS,int fd){
     int len;
     if( strcmp(path,"/") == 0  || strcmp(path,"index") == 0){
         strcpy(path,"src/web/index.html");
         len=get_file_size_by_stat(path);
          if(len >0){
-            send_headers( 200, "index", NULL, "text/html", len, -1 );
-            send_file(path);
+            pid_t pid=fork();
+                if(pid == 0){
+                    send_headers( 200, "OK", NULL,get_mime_type(path), len, -1 );
+                    send_file(path,fd);
+                }
          }
          //send_errors( 200, path,NULL, qS);
     }else{
         char p[128];
-        len=get_file_size_by_stat(path);
+        memset(p,'\0',sizeof(p));
         strcpy(p,"src/web");
         strcat(p,path);
-        send_headers( 200, "index", NULL, "text/javascript", len, -1 );
-        send_file(path);
+        pid_t pid=fork();
+        if(pid == 0){
+            len=get_file_size_by_stat(p);
+            send_headers( 200, "OK", NULL,get_mime_type(p), len, -1 );
+            send_file(p,fd);
+        }
+       
     }
    
 }
 
-void  handle_request(int fd,struct list_head *head){
+void  handle_request(int fd,struct list_head *head)
+{
     int fd1=dup(fd);
     dup2(fd,STDOUT_FILENO);
     //printf("start to handle\n");
@@ -186,21 +198,30 @@ void  handle_request(int fd,struct list_head *head){
     method=find_key("method",head);
     path=find_key("path_row",head);
     if(method == NULL || path == NULL) return ;
-    if(strcmp(method,"GET") ==0 ){
-        if(path != NULL){
+    if(strcmp(method,"GET") ==0 )
+    {
+        if(path != NULL)
+        {
             char* tok;
             char p[128];
             char qS[128];
-            if((tok=strstr(path,"?")) != NULL){
+            if((tok=strstr(path,"?")) != NULL)
+            {
                 sscanf(path,"%[^?]?%s",p,qS);
-            }else{
+            }else
+            {
                  sscanf(path,"%s",p);
                  strcpy(qS,"");
             }
-            do_path(p,qS);
+
+            do_path(p,qS,fd);
+
+        }
+    }else if(strcmp(method,"POST")==0){
+       // send_headers( 200, "OK", NULL,get_mime_type("*.js"), -1, -1 );
+       printf("HTTP/1.1 200 OK\r\n\r\n");
 
     }
-}
 }
 void RecvData(int fd)
 {
@@ -215,6 +236,7 @@ void RecvData(int fd)
     add_msg(new_msg("method",tmp1),&head);
     tmp1=strtok(NULL," ");
     add_msg(new_msg("path_row",tmp1),&head);
+    printf("%s\n",find_key("path_row",&head));
     memset(recvBuf, 0, 256);
     while(  get_line(fd,recvBuf)  ){
         char*tmp;
@@ -251,19 +273,7 @@ void RecvData(int fd)
              add_msg(new_msg("dic_data",recvBuf),&head);
         }
     }
-    pid_t pid;
-    if((pid =fork()) == 0){
-         handle_request(fd,&head);
-    }else if(pid < 0){
-        perror("pid error:");
-    }
-   
-    // int count;
-    // Msg** tmp=get_msg_all("dic_data",&head,&count); 
-    // if(tmp == NULL) exit(1);
-    // for(int i=0;i<count;i++){
-    //     printf("key%d: %s\n",i+1,tmp[i]->json.value);
-    // }
+    handle_request(fd,&head);
 }
 char* find_key(char* key,struct list_head* head){
         char* value=(char*)malloc(sizeof(char*)*256);
